@@ -13,28 +13,33 @@
             </MudMenu>
         </MudToolBar>
         <MudGrid>
-                <MudItem xs="3">
-                    <MudPaper Width="100%">                
-                        <MudNumericField Class="ma-2" @bind-Value="AreaTotalLargo" Label="Area Total Largo" Variant="Variant.Text" Step=".2M"/>
-                        <MudNumericField Class="ma-2" @bind-Value="AreaTotalAncho" Label="Area Total Ancho" Variant="Variant.Text" Step=".2M"/>
-                        <MudNumericField Class="ma-2" @bind-Value="AreaTrabajoLargo" Label="Area de Trabajo Largo" Variant="Variant.Text" Step=".2M"/>
-                        <MudNumericField Class="ma-2" @bind-Value="AreaTrabajoAncho" Label="Area de Trabajo Ancho" Variant="Variant.Text" Step=".2M"/>
-                        <MudNumericField Class="ma-2" @bind-Value="EntrePiezas" Label="Entre piezas" Variant="Variant.Text" Step=".2M"/>
-                        <MudNumericField Class="ma-2" @bind-Value="AreaPiezaLargo" Label="Area Pieza Largo" Variant="Variant.Text" Step=".2M"/>
-                        <MudNumericField Class="ma-2" @bind-Value="AreaPiezaAncho" Label="Area Pieza Ancho" Variant="Variant.Text" Step=".2M"/>                 
-                    </MudPaper>
-                </MudItem>
-                <MudItem xs="6">
-                    <MudPaper Height="400px" Width="100%" Class="pa-16 ma-2 mud-info" Outlined="true" Square="true">                
+            <MudItem xs="3">
+                <MudPaper Width="100%">                
+                    <MudNumericField Class="ma-2" @bind-Value="AreaTotalLargo" Label="Area Total Largo" Variant="Variant.Text" Step=".2M"/>
+                    <MudNumericField Class="ma-2" @bind-Value="AreaTotalAncho" Label="Area Total Ancho" Variant="Variant.Text" Step=".2M"/>
+                    <MudNumericField Class="ma-2" @bind-Value="AreaTrabajoLargo" Label="Area de Trabajo Largo" Variant="Variant.Text" Step=".2M"/>
+                    <MudNumericField Class="ma-2" @bind-Value="AreaTrabajoAncho" Label="Area de Trabajo Ancho" Variant="Variant.Text" Step=".2M"/>
+                    <MudNumericField Class="ma-2" @bind-Value="AreaTrabajoMargenInteriorLargo" Label="Zona Trabajo Margen Interior Largo" Variant="Variant.Text" Step=".1M"/>
+                    <MudNumericField Class="ma-2" @bind-Value="AreaTrabajoMargenInteriorAncho" Label="Zona Trabajo Margen Interior Ancho" Variant="Variant.Text" Step=".1M"/>
+                    <MudNumericField Class="ma-2" @bind-Value="EntrePiezas" Label="Entre piezas" Variant="Variant.Text" Step=".2M"/>
+                </MudPaper>
+            </MudItem>
+            <MudItem xs="6">
+                <MudPaper Height="400px" Width="100%" Class="pa-16 ma-2 mud-info" Outlined="true" Square="true">                
                               
-                    </MudPaper>
-                </MudItem>
-                <MudItem  xs="3">
-                    <MudPaper Width="100%">                
-                        <MudNumericField Class="ma-2" @bind-Value="NumeroPiezas" Label="Piezas" Variant="Variant.Text" Step=".2M"/>                        
-                    </MudPaper>
-                </MudItem>
-            </MudGrid>
+                </MudPaper>
+            </MudItem>
+            <MudItem  xs="3">
+                <MudPaper Width="100%">                
+                    <MudNumericField Class="ma-2" @bind-Value="NumeroPiezas" Label="Piezas" Variant="Variant.Text" Step="1"/>  
+                    <MudNumericField Class="ma-2" @bind-Value="AreaPiezaLargo" Label="Area Pieza Largo" Variant="Variant.Text" Step=".2M"/>
+                    <MudNumericField Class="ma-2" @bind-Value="AreaPiezaAncho" Label="Area Pieza Ancho" Variant="Variant.Text" Step=".2M"/> 
+                </MudPaper>
+            </MudItem>
+        </MudGrid>
+         <MudItem xs="12" sm="6" md="4">
+            <MudField Label="Metros Lineales" Variant="Variant.Outlined">@MetrosLineales</MudField>
+        </MudItem>
     </MudContainer>
 </MudPaper>
 
@@ -43,8 +48,12 @@
     public decimal AreaTotalAncho { get; set; }
     public decimal AreaTrabajoLargo { get; set; }
     public decimal AreaTrabajoAncho { get; set; }
+     public decimal AreaTrabajoMargenInteriorLargo { get; set; }
+    public decimal AreaTrabajoMargenInteriorAncho { get; set; }
     public decimal EntrePiezas { get; set; }
     public decimal AreaPiezaLargo { get; set; }
     public decimal AreaPiezaAncho { get; set; }
-    public decimal NumeroPiezas { get; set; }
+    private int _numeroPiezas;
+    public int NumeroPiezas { get => _numeroPiezas; set { _numeroPiezas = value < 0 ? 0 : value; } }
+    public int MetrosLineales { get; set; } = 5;
 }
