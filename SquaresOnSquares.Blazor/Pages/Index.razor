@@ -2,6 +2,49 @@
 
 <PageTitle>Index</PageTitle>
 
-<MudText Typo="Typo.h3" GutterBottom="true">Hello, world!</MudText>
-<MudText Class="mb-8">Welcome to your new app, powered by MudBlazor!</MudText>
-<MudAlert Severity="Severity.Normal">You can find documentation and examples on our website here: <MudLink Href="https://mudblazor.com" Typo="Typo.body2" Color="Color.Inherit"><b>www.mudblazor.com</b></MudLink></MudAlert>
+<MudText Typo="Typo.h3" GutterBottom="true">Bienvenido!</MudText>
+<MudPaper Height="600px" Width="100%">
+    <MudContainer MaxWidth="MaxWidth.ExtraLarge">
+        <MudToolBar>
+            <MudMenu Icon="@Icons.Material.Outlined.Settings" Color="Color.Inherit">
+                <MudMenuItem>Template</MudMenuItem>
+                <MudMenuItem>My account</MudMenuItem>
+                <MudMenuItem>Logout</MudMenuItem>
+            </MudMenu>
+        </MudToolBar>
+        <MudGrid>
+                <MudItem xs="3">
+                    <MudPaper Width="100%">                
+                        <MudNumericField Class="ma-2" @bind-Value="AreaTotalLargo" Label="Area Total Largo" Variant="Variant.Text" Step=".2M"/>
+                        <MudNumericField Class="ma-2" @bind-Value="AreaTotalAncho" Label="Area Total Ancho" Variant="Variant.Text" Step=".2M"/>
+                        <MudNumericField Class="ma-2" @bind-Value="AreaTrabajoLargo" Label="Area de Trabajo Largo" Variant="Variant.Text" Step=".2M"/>
+                        <MudNumericField Class="ma-2" @bind-Value="AreaTrabajoAncho" Label="Area de Trabajo Ancho" Variant="Variant.Text" Step=".2M"/>
+                        <MudNumericField Class="ma-2" @bind-Value="EntrePiezas" Label="Entre piezas" Variant="Variant.Text" Step=".2M"/>
+                        <MudNumericField Class="ma-2" @bind-Value="AreaPiezaLargo" Label="Area Pieza Largo" Variant="Variant.Text" Step=".2M"/>
+                        <MudNumericField Class="ma-2" @bind-Value="AreaPiezaAncho" Label="Area Pieza Ancho" Variant="Variant.Text" Step=".2M"/>                 
+                    </MudPaper>
+                </MudItem>
+                <MudItem xs="6">
+                    <MudPaper Height="400px" Width="100%" Class="pa-16 ma-2 mud-info" Outlined="true" Square="true">                
+                              
+                    </MudPaper>
+                </MudItem>
+                <MudItem  xs="3">
+                    <MudPaper Width="100%">                
+                        <MudNumericField Class="ma-2" @bind-Value="NumeroPiezas" Label="Piezas" Variant="Variant.Text" Step=".2M"/>                        
+                    </MudPaper>
+                </MudItem>
+            </MudGrid>
+    </MudContainer>
+</MudPaper>
+
+@code {
+    public decimal AreaTotalLargo { get; set; }
+    public decimal AreaTotalAncho { get; set; }
+    public decimal AreaTrabajoLargo { get; set; }
+    public decimal AreaTrabajoAncho { get; set; }
+    public decimal EntrePiezas { get; set; }
+    public decimal AreaPiezaLargo { get; set; }
+    public decimal AreaPiezaAncho { get; set; }
+    public decimal NumeroPiezas { get; set; }
+}

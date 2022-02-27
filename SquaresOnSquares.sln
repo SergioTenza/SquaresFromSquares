@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquaresOnSquares.Winforms", "SquaresOnSquares.Winforms\SquaresOnSquares.Winforms.csproj", "{152CA25A-20C2-4633-BAC1-0E26D572BD95}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SquaresFromSquaresBlazorWasm", "SquaresOnSquares.Blazor\SquaresFromSquaresBlazorWasm.csproj", "{DD10AEA1-D5D4-4A81-8C1C-5B1A9D5590CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{152CA25A-20C2-4633-BAC1-0E26D572BD95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{152CA25A-20C2-4633-BAC1-0E26D572BD95}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{152CA25A-20C2-4633-BAC1-0E26D572BD95}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{152CA25A-20C2-4633-BAC1-0E26D572BD95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD10AEA1-D5D4-4A81-8C1C-5B1A9D5590CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD10AEA1-D5D4-4A81-8C1C-5B1A9D5590CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD10AEA1-D5D4-4A81-8C1C-5B1A9D5590CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD10AEA1-D5D4-4A81-8C1C-5B1A9D5590CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
