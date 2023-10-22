@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SquaresFromSquaresBlazorWasm", "SquaresOnSquares.Blazor\SquaresFromSquaresBlazorWasm.csproj", "{DD10AEA1-D5D4-4A81-8C1C-5B1A9D5590CA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SquaresOnSquares.Shared", "SquaresOnSquares.Shared\SquaresOnSquares.Shared.csproj", "{911194B9-8917-4FF0-B492-8FD282FD2B21}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{DD10AEA1-D5D4-4A81-8C1C-5B1A9D5590CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD10AEA1-D5D4-4A81-8C1C-5B1A9D5590CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD10AEA1-D5D4-4A81-8C1C-5B1A9D5590CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{911194B9-8917-4FF0-B492-8FD282FD2B21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{911194B9-8917-4FF0-B492-8FD282FD2B21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{911194B9-8917-4FF0-B492-8FD282FD2B21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{911194B9-8917-4FF0-B492-8FD282FD2B21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
